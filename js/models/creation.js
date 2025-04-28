@@ -36,7 +36,7 @@ class Creation {
     }
 }
 
-export default Creation;
+module.exports = Creation;
 
 // const item = Item.fromJSON(jsonTemplate);
 // console.log(item.getDescription()); // Health Potion (Type: Consumable) - Attributes: {"healing":50,"rarity":"Common"}

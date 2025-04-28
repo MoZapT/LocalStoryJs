@@ -1,4 +1,4 @@
-import Game from './stages/game.js';
+const Game = require('./stages/game.js');
 
 var _stage;
 

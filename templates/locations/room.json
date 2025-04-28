@@ -1,0 +1,9 @@
+{
+    "name": "room",
+    "description": "room_desc",
+    "type": "location",
+    "possible_parent_type": [
+        "tavern",
+        "building"
+    ]
+}

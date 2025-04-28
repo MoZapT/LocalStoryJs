@@ -1,0 +1,19 @@
+{
+    "name": "tavern",
+    "description": "tavern_desc",
+    "type": "location",
+    "possible_parent_type": [
+        "town",
+        "city"
+    ],
+    "possible_child_locations": [
+        "room",
+        "common_room",
+        "kitchen",
+        "cellar",
+        "storage",
+        "bathroom",
+        "stables",
+        "office"
+    ]
+}
