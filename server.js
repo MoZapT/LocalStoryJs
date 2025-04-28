@@ -1,4 +1,5 @@
 const express = require('express');
+const WebSocket = require('ws');
 const path = require('path');
 
 const app = express();
@@ -28,3 +29,30 @@ app.listen(PORT, () => {
 });
 
 const main = require('./js/main.js');
+
+
+// Erstelle einen WebSocket-Server
+const wss = new WebSocket.Server({ port: 8080 });
+
+console.log('WebSocket-Server läuft auf ws://localhost:8181');
+
+// Event: Wenn ein Client eine Verbindung herstellt
+wss.on('connection', (ws) => {
+    console.log('Ein Client hat sich verbunden.');
+
+    // Event: Wenn der Server eine Nachricht vom Client erhält
+    ws.on('message', (message) => {
+        console.log(`Nachricht vom Client: ${message}`);
+
+        // Antwort an den Client
+        ws.send(`Server sagt: Du hast "${message}" gesendet.`);
+    });
+
+    // Event: Wenn die Verbindung geschlossen wird
+    ws.on('close', () => {
+        console.log('Ein Client hat die Verbindung geschlossen.');
+    });
+
+    // Sende eine Begrüßungsnachricht an den Client
+    ws.send('Willkommen beim WebSocket-Server!');
+});
