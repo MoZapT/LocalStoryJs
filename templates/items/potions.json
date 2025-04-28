@@ -1,0 +1,10 @@
+{
+    "name": "health_potion",
+    "description": "health_potion_desc",
+    "type": "potion",
+    "attributes": {
+        "consumable": true,
+        "healing": 50,
+        "rarity": "common"
+    }
+}

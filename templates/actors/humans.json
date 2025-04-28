@@ -1,0 +1,45 @@
+{
+    "name": "human",
+    "description": "human_desc",
+    "type": "actor",
+    "attributes": {
+        "health": 100,
+        "strength": 10,
+        "agility": 10,
+        "intelligence": 10,
+        "wisdom": 10,
+        "charisma": 10,
+        "level": 1,
+        "experience": 0,
+        "skills": {
+            "swordsmanship": 5,
+            "archery": 5,
+            "magic": 5
+        },
+        "inventory": [],
+        "equipment": {
+            "head": null,
+            "chest": null,
+            "legs": null,
+            "feet": null,
+            "hands": null,
+            "weapon": null
+        }
+    },
+    "scripts": {
+        "attack": {
+            "damage": 10,
+            "range": 1,
+            "cooldown": 1
+        },
+        "defend": {
+            "armor": 5,
+            "cooldown": 1
+        },
+        "cast_spell": {
+            "spell_name": null,
+            "mana_cost": 10,
+            "cooldown": 2
+        }
+    }
+}
